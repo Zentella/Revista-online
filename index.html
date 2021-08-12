@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revista Online</title>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">  
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 
@@ -124,7 +127,7 @@
                 </div>
                 <!-- tags -->
                 <div class="tags">
-                    <h1>Tags </h1>
+                    <h1>Tags</h1>
                     <ul>
                         <li>Viajes</li>
                         <li>Noticias</li>
@@ -165,155 +168,6 @@
             <p>Todos los derechos reservados</p>
         </div>
     </div>
-
-    <!--
-        No usar bootstrap
-        **********************
-        /// Yep
-$breakpoints: (
-  'medium': (min-width: 800px),
-  'large': (min-width: 1000px),
-  'huge': (min-width: 1200px),
-);
-
-// Nope
-$breakpoints: (
-  'tablet': (min-width: 800px),
-  'computer': (min-width: 1000px),
-  'tv': (min-width: 1200px),
-);
-$breakpoints: (
-  'seed': (min-width: 800px),
-  'sprout': (min-width: 1000px),
-  'plant': (min-width: 1200px),
-);
-****Los ejemplos anteriores utilizan mapas anidados para definir breakpoints, sin embargo, 
-esto realmente depende del tipo de breakpoint-Manager que utilice. Puede optar por cadenas 
-en lugar de mapas internos para obtener más flexibilidad (por ejemplo, '(ancho mínimo: 800 px)').
-breakpoint Manager
-Una vez que haya nombrado sus breakpoint de la manera que desee, necesita una forma de usarlos en media queries reales. 
-Hay muchas formas de hacerlo, pero debo decir que soy un gran fanático del mapa de breakpoint 
-leído por una función getter. Este sistema es simple y eficiente.
-//// Responsive breakpoint manager
-/// @access public
-/// @param {String} $breakpoint - Breakpoint
-/// @requires $breakpoints
-@mixin respond-to($breakpoint) {
-  $raw-query: map-get($breakpoints, $breakpoint);
-
-  @if $raw-query {
-    $query: if(
-      type-of($raw-query) == 'string',
-      unquote($raw-query),
-      inspect($raw-query)
-    );
-
-    @media #{$query} {
-      @content;
-    }
-  } @else {
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.';
-  }
-}
-.foo {
-  color: red;
-
-  @include respond-to('medium') {
-    color: blue;
-  }
-}
-.foo {
-  color: red;
-}
-
-@media (min-width: 800px) {
-  .foo {
-    color: blue;
-  }
-}
-
-Usar las medidas de breakpoint ofrecidas en bootstrap para los media query
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-Dispositivos pequeños @media (min-width: 576px) { ... }
-Dispositivos medianos @media (min-width: 768px) { ... }
-Dispositivos grandes @media (min-width: 992px) { ... }
-Dispositivos extra grandes @media (min-width: 1200px) { ... }
-
-usar el patrón 7 - 1
-
-Crear un archivo utilizando el preprocesador _SASS_ exclusivamente para la grilla y
-usarlo para obtener el comportamiento responsive
-
-Mejorar el nombre de las clases utilizadas usando la nomenclatura BEM
-
-Usar a lo menos 3 etiquetas semánticas de _HTML5_
-
-Parte II
-1. Solucionar los problemas de superposición de la sección newsletter y el menú de
-navegación
-2. Solucionar los diversos problemas de visualización para los distintos breakpoint
-3. Usar clases anidadas de _SASS_
-4. Opcional: Crear un repositorio y GitHub Page para el sitio (para ellos debes inciar el
-proyecto con la utilización de _Git_)
-
-Además cuentas con el código
-HTML y CSS del actual sitio web estático sin responsive y diversos screenshot de como
-debería quedar la página final.
-
-Recomendación General: verifica el funcionamiento actual del sitio que se encuentra en la
-carpeta de apoyo, luego, crea otro proyecto aparte desde cero, donde deberás primeramente
-agregar el HTML existente, luego podrás crear todos los archivos en SASS con sus
-respectivas carpetas e ir agregando parte por parte del CSS actual e ir verificando que
-funcione correctamente, para luego agregar todos los elementos necesarios para que el
-sitio sea responsive como lo solicita la empresa.
-
-Líneas verticales en grilla
-Para poder posicionar los ítems es importante conocer las líneas verticales:
-● La líneas verticales nos permitirán
-identificar dónde comienza y termina la
-grilla.
-● El saberlo nos permitirá posicionar de
-manera más fácil los ítems de la grilla
-
-Desktop First
-● Los estilos en esta técnica se
-construyen usando una serie de
-media queries que especifican el
-ancho máximo.
-● Por lo general el diseño en
-dispositivos pequeños es simple.
-
-Mobile First
-● Este método utiliza los media
-queries para ajustar el diseño en
-resoluciones más grandes,
-especificando el ancho mínimo
-que tendrá el primer dispositivo a
-afectar. 
-
-Breakpoints
-● El concepto de breakpoint se
-refiere al punto en el cual el
-dispositivo aplica el bloque de
-código contenido dentro de un
-media query. 
-
-    -->
 
 </body>
 
